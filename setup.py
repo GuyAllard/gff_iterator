@@ -8,4 +8,15 @@ setup(name="gff_iterator",
       url="https://github.com/GuyAllard/gff_iterator",
       license="MIT",
       platforms=['any'],
-      packages=["gff_iterator"])
+      packages=["gff_iterator"],
+      classifiers=[
+            'Development Status :: 3 - Alpha',
+            'Intended Audience :: Developers',
+            'Intended Audience :: Science/Research',
+            'Operating System :: OS Independent',
+            'Programming Language :: Python',
+            'Topic :: Scientific/Engineering',
+            'License :: MIT License',
+      ],
+      keywords='bioinformatics'
+)
