@@ -104,9 +104,12 @@ def to_string(data):
     :param data: dictionary of gff/gtf data (see get_fields)
     :return:     string for a gff/gtf row
     """
-    attribute_string = "; ".join(
-        ["{} {}".format(key, value_to_attribute(data["attributes"][key])) for key in data["attributes"]]
-    )
+    if len(data["attributes"]) > 0:
+        attribute_string = "; ".join(
+            ["{} {}".format(key, value_to_attribute(data["attributes"][key])) for key in data["attributes"]]
+        ) + ";"
+    else:
+        attribute_string = ""
 
     return "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
         data["seqname"],
