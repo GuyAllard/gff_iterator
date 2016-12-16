@@ -156,6 +156,10 @@ class Feature(object):
         return self._data["source"]
 
     @property
+    def feature(self):
+        return self._data["feature"]
+
+    @property
     def start(self):
         """
         Start coordinate (remember, 1-based!!)
