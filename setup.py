@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name="gff_iterator",
-      version="0.0.1",
+      version="1.0.0",
       description="Simple iterator to parse records from a gff file",
       author="Guy Allard",
       author_email="guyallard01 AT gmail DOT com",
