@@ -1,13 +1,19 @@
-GFF/GTF Iterator
+GFF Iterator
 ==============
-A very simple python iterator for parsing gff files
+A very simple python iterator for parsing GFF/GTF files
 
 
 **Installation**  
 from within this directory, run  
-```pip install .```
+```
+pip install .
+```
 
 
 **Usage**  
-```TODO
-    example usage here```
+```python
+from gff_iterator import gff_iterator
+with open("somefile.gff", "r") as gff_file:
+    for record in gff_iterator(gff_file):
+        print(record)
+```
