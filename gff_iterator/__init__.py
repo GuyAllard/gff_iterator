@@ -151,13 +151,25 @@ class Feature(object):
     def chromosome(self):
         return self._data["seqname"]
 
+    @chromosome.setter
+    def chromosome(self, value):
+        self._data["seqname"] = value
+
     @property
     def source(self):
         return self._data["source"]
 
+    @source.setter
+    def source(self, value):
+        self._data["source"] = value
+
     @property
     def feature(self):
         return self._data["feature"]
+
+    @feature.setter
+    def feature(self, value):
+        self._data["feature"] = value
 
     @property
     def start(self):
@@ -166,21 +178,41 @@ class Feature(object):
         """
         return self._data["start"]
 
+    @start.setter
+    def start(self, value):
+        self._data["start"] = value
+
     @property
     def end(self):
         return self._data["end"]
+
+    @end.setter
+    def end(self, value):
+        self._data["end"] = value
 
     @property
     def score(self):
         return self._data["score"]
 
+    @score.setter
+    def score(self, value):
+        self._data["score"] = value
+
     @property
     def strand(self):
         return self._data["strand"]
 
+    @strand.setter
+    def strand(self, value):
+        self._data["strand"] = value
+
     @property
     def frame(self):
         return self._data["frame"]
+
+    @frame.setter
+    def frame(self, value):
+        self._data["frame"] = value
 
     @property
     def attributes(self):
