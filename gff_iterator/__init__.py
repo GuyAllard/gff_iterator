@@ -354,6 +354,8 @@ def make_feature(data):
     if data["feature"] == "CDS":
         return CDS(data)
 
+    return None
+
 
 def gff_iterator(gff_handle):
     """
@@ -370,6 +372,10 @@ def gff_iterator(gff_handle):
 
         # make a Feature object for this line
         feature = make_feature(get_fields(line))
+
+        # continue if feature is unknown type
+        if feature is None:
+            continue
 
         # figure out where this feature belongs
         parent = None
